@@ -1,0 +1,11 @@
+<%= render Avo::PanelComponent.new do |c| %>
+  <% c.with_body do %>
+    <div class="nested-form-wrapper divide-y" data-new-record="<%= f.object.new_record? %>">
+      <%= avo_edit_field :email, as: :text, form: f, required: true %>
+      <%= avo_edit_field :first_name, as: :text, form: f, required: true %>
+      <%= avo_edit_field :last_name, as: :text, form: f, required: true %>
+      <%= avo_edit_field :phone_number, as: :text, form: f, required: true %>
+      <%= avo_edit_field :date_of_birth, as: :date, form: f, required: true %>
+    </div>
+  <% end %>
+<% end %>
